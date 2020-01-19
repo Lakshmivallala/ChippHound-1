@@ -27,6 +27,8 @@ app.get('/', (req, res) => {
 app.get('/call', (req, res) => {
 	//run the call script
 
+	console.log("yolooo")
+
 	exec('cd Utils && python call.py', (err, stdout, stderr) => {
 	  if (err) {
 	    // node couldn't execute the command
