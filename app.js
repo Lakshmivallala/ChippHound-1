@@ -1,7 +1,9 @@
 const express = require('express');
 const helmet = require('helmet');
+const multer = require('multer');
 
 const { exec } = require('child_process');
+var upload = multer({ dest: '/tmp/'});
 
 const bodyParser = require("body-parser");
 const cors = require("cors");
@@ -55,7 +57,23 @@ app.get('/violence/sms', async (req, res) => {
 	  }
 	  res.status(200).send("done");
 	});
-})
+});
+
+// File input field name is simply 'file'
+app.post('/file_upload', upload.single('file'), function(req, res) {
+  var file = __dirname + '/' + req.file.filename;
+  fs.rename(req.file.path, file, function(err) {
+    if (err) {
+      console.log(err);
+      res.send(500);
+    } else {
+      res.json({
+        message: 'File uploaded successfully',
+        filename: req.file.filename
+      });
+    }
+  });
+});
 
 app.listen(port, () => {
 	console.log(`listening on ${port}`);
