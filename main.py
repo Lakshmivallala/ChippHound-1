@@ -7,8 +7,9 @@ import time
 from datetime import datetime
 import os
 import requests;
+from config import config;
 
-bot = telepot.Bot("955635606:AAFeVFAP6P4ZPGDkDsWaGmQn-62PvOVkRHI")
+bot = telepot.Bot(config.telegram_api)
 MessageLoop(bot, adv.handle).run_as_thread()
 # Pretrained classes in the model
 classNames = {0: 'background',
@@ -20,7 +21,7 @@ counter = 0
 # emoji
 police = u'\U0001F4A8'
 
-bUrl = 'https://cutapi.chipphound.wtf'
+bUrl = config.bUrl
 
 def id_class_name(class_id, classes):
     for key, value in classes.items():
@@ -90,7 +91,7 @@ while True:
                                         #x = requests.get(bUrl+'/email')
                                         if(canCall):
                                             x = requests.get(bUrl+'/call')
-                                            # x = requests.get(bUrl+'/email')
+                                            x = requests.get(bUrl+'/email')
                                         canCall = False
                                         #time.sleep(10)
                                         #x = requests.post(bUrl, data=myObj)
