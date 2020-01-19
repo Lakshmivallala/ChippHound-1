@@ -11,9 +11,7 @@ At present, a lot of labour is spent on physical patrolling of border areas, cit
 ![Image01](Screenshots/image1.png)
 - As soon the application detects the intrusion/violence it sends an alert email to the authorities with a snapshot of that feed which makes it easier to identify the situation and act accordingly.
 - Our application sends Telegram messages with a snapshot attached, it also makes automated phone calls and SMSs alerting the authorities.
-![Image01](Screenshots/image3.png)
-
-![Image01](Screenshots/image2.png)
+![Image01](Screenshots/new.png)
 
 ### Raspberry Pi
 We used Raspberry Pi as our main platform for this project due to the following reasons.
