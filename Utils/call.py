@@ -9,9 +9,10 @@ auth_token = "cbed0cb6d1a66f290f7d2c5820324009"
 client = Client(account_sid, auth_token)
 
 call = client.calls.create(
-                        url='http://demo.twilio.com/docs/classic.mp3',
+                        url='https://www.dropbox.com/s/it66o7aj75uogzz/audiooooo.mp3?dl=0',
                         to='+917987523794',
                         from_='+12057083227'
                     )
 
 print(call.sid)
+# http://demo.twilio.com/docs/classic.mp3
