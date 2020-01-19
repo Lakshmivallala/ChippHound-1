@@ -667,7 +667,7 @@ h1 small, h2 small, h3 small, h1 .small, h2 .small, h3 .small {
     background-size: cover;
     height: auto;
     left: 0;
-    min-height: 100%;
+    min-height: 120%;
     min-width: 100%;
     position: absolute;
     top: 0;
@@ -753,7 +753,7 @@ h1 small, h2 small, h3 small, h1 .small, h2 .small, h3 .small {
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.33);
     text-align: center;
     margin-top: 10px;
-    
+
 }
 .main .subscribe .info-text{
     font-size: 18px;
