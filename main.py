@@ -8,7 +8,7 @@ from datetime import datetime
 import os
 import requests;
 
-bot = telepot.Bot("955635606:AAF3k2BkMsPFCNiuRv5Qd8jrA8jmBLXmw2s")
+bot = telepot.Bot("955635606:AAFeVFAP6P4ZPGDkDsWaGmQn-62PvOVkRHI")
 MessageLoop(bot, adv.handle).run_as_thread()
 # Pretrained classes in the model
 classNames = {0: 'background',
@@ -90,12 +90,8 @@ while True:
                                         #x = requests.get(bUrl+'/email')
                                         if(canCall):
                                             x = requests.get(bUrl+'/call')
-                                            x = requests.get(bUrl+'/email')
-                                            canCall = False
-                                            counter = 0
-                                        counter += 1;
-                                        if(counter >= 100):
-                                            canCall = True;
+                                            # x = requests.get(bUrl+'/email')
+                                        canCall = False
                                         #time.sleep(10)
                                         #x = requests.post(bUrl, data=myObj)
                                         # br = 1
